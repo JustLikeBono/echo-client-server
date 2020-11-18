@@ -1,18 +1,16 @@
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
 #include <sys/socket.h>
 #include <iostream>
 #include <thread>
+#include <arpa/inet.h>
+
 
 using namespace std;
 
 void usage() {
 	cout << "syntax : echo-client <ip> <port>\n";
 	cout << "sample : echo-client 192.168.10.2 1234\n";
-
-
-
 }
 
 struct Param {
