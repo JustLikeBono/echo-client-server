@@ -117,7 +117,7 @@ int main(int argc, char* argv[]) {
 		return -1;
 	}
 
-	while (true) {
+	while (1) {
 		struct sockaddr_in addr;
 		socklen_t len = sizeof(addr);
 		int sd = accept(sd, (struct sockaddr *)&addr, &len);
