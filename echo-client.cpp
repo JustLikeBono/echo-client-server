@@ -79,11 +79,15 @@ int main(int argc, char* argv[]) {
 
 	thread t(recvThread, sd);
 	t.detach();
-	while (true) {
-		string s;
-		getline(cin, s);
-		ssize_t res = send(sd, s.c_str(), s.size(), 0);
+	while (1) {
+		
+		string str;
+		getline(cin, str);
+		
+		ssize_t res = send(sd, str.c_str(), str.size(), 0);
+		
 		if (res == 0 || res == -1) {
+			
 			cerr << "send return " << res << endl;
 			perror("send");
 			break;
